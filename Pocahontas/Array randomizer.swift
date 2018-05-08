@@ -54,8 +54,8 @@ struct RandomArray {
         return self.selectionSort(&globalIndex)
     }
     
-    mutating func insertSort(_ globalIndex: inout Int) -> (Int, Int)? {
-        guard globalIndex < self.count else { return nil }
+//    mutating func insertSort(_ globalIndex: inout Int) -> (Int, Int)? {
+//        guard globalIndex < self.count else { return nil }
 //        var count = 0
 //        var y = globalIndex
 //        let temp = self.array[y]
@@ -68,17 +68,17 @@ struct RandomArray {
 //        print(self.array)
 //        globalIndex += 1
 //        return (y + count, 0)
-        var array = self.array
-        let index = array.index(of: self.array.min()!)
-        for ind in globalIndex..<index! {
-            if array[index!] < array[ind] {
-                array[index!] = 1000
-                self.array.swapAt(index!, ind)
-                globalIndex += 1
-                return (index!, ind)
-            }
-        }
-        return self.insertSort(&globalIndex)
-    }
+//        var array = self.array
+//        let index = array.index(of: self.array.min()!)
+//        for ind in globalIndex..<index! {
+//            if array[index!] < array[ind] {
+//                array[index!] = 1000
+//                self.array.swapAt(index!, ind)
+//                globalIndex += 1
+//                return (index!, ind)
+//            }
+//        }
+//        return self.insertSort(&globalIndex)
+//    }
 }
 

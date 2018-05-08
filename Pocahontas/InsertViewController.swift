@@ -30,24 +30,22 @@ class InsertViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-//        guard 1 < randomArray.count else { return }
-//        InsertTableView.setAllCellViewsClear(randomArray.count)
-//        guard globalIndex < randomArray.count - 1 else { return }
-//        var index = globalIndex
-//        InsertTableView.cellForRow(at: IndexPath(row: index, section: 0))?.contentView.setBackgroundColor(.green)
-//        while index >= 0 && randomArray.array[index + 1] < randomArray.array[index] {
-//            InsertTableView.setAllCellViewsClear(randomArray.count)
-//            randomArray.array.swapAt(index, index + 1)
-//            InsertTableView.beginUpdates()
-//            InsertTableView.cellForRow(at: IndexPath(row: index + 1, section: 0))?.contentView.setBackgroundColor(.green)
-//            InsertTableView.cellForRow(at: IndexPath(row: index, section: 0))?.contentView.setBackgroundColor(.red)
-//            InsertTableView.moveRow(at: IndexPath(row: index + 1, section: 0), to: IndexPath(row: index, section: 0))
-//            InsertTableView.moveRow(at: IndexPath(row: index, section: 0), to: IndexPath(row: index + 1, section: 0))
-//            InsertTableView.endUpdates()
-//            index -= 1
-//        }
-//        globalIndex += 1
-        randomArray.insertSort(&globalIndex)
-        print(randomArray.array)
+        guard 1 < randomArray.count else { return }
+        InsertTableView.setAllCellViewsClear(randomArray.count)
+        guard globalIndex < randomArray.count - 1 else { return }
+        var index = globalIndex
+        InsertTableView.cellForRow(at: IndexPath(row: index, section: 0))?.contentView.setBackgroundColor(.green)
+        while index >= 0 && randomArray.array[index + 1] < randomArray.array[index] {
+            InsertTableView.setAllCellViewsClear(randomArray.count)
+            randomArray.array.swapAt(index, index + 1)
+            InsertTableView.beginUpdates()
+            InsertTableView.cellForRow(at: IndexPath(row: index + 1, section: 0))?.contentView.setBackgroundColor(.green)
+            InsertTableView.cellForRow(at: IndexPath(row: index, section: 0))?.contentView.setBackgroundColor(.red)
+            InsertTableView.moveRow(at: IndexPath(row: index + 1, section: 0), to: IndexPath(row: index, section: 0))
+            InsertTableView.moveRow(at: IndexPath(row: index, section: 0), to: IndexPath(row: index + 1, section: 0))
+            InsertTableView.endUpdates()
+            index -= 1
+        }
+        globalIndex += 1
     }
 }
