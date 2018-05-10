@@ -41,7 +41,7 @@ class SortVisualizationViewController: UIViewController, UITableViewDelegate, UI
         case .bubble:
             unsafeIndices = randomArray.bubbleSort(&indeces.0, &indeces.1)
         case .insert:
-            unsafeIndices = randomArray.insertSort(&indeces.0, &indeces.1)
+            unsafeIndices = randomArray.insertSort(&indeces.0)
         case .selection:
             unsafeIndices = randomArray.selectionSort(&indeces.0)
         }
