@@ -11,17 +11,9 @@ import UIKit
 class SortTypeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellTitleLabel: UILabel!
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
 
 class VisualizationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellTitleLabel: UILabel!
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }
